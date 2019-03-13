@@ -6,6 +6,7 @@ import numpy.ma as ma
 from cloudnetpy import constants as con
 from cloudnetpy import utils
 
+
 def c2k(temp):
     """Converts Celsius to Kelvins."""
     return ma.array(temp) + 273.15
