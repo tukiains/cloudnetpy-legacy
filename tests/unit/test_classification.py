@@ -1,5 +1,4 @@
 import numpy as np
-from collections import namedtuple
 import pytest
 from cloudnetpy.products.classification import _get_target_classification, _get_detection_status
 
