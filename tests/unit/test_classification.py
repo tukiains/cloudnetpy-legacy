@@ -46,6 +46,4 @@ def test_get_target_classification(value):
 def test_get_detection_status_value(value):
     bits = CategorizeBits()
     x = _get_detection_status(bits)
-    print("")
-    print(x)
     assert value in x
