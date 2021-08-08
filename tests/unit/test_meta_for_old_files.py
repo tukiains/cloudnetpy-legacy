@@ -1,3 +1,4 @@
+import copy
 import numpy as np
 import numpy.ma as ma
 from cloudnetpy.plotting import meta_for_old_files
@@ -16,7 +17,8 @@ def test_fix_old_data():
 
 
 def test_fix_old_data_2():
-    data, name = meta_for_old_files.fix_old_data(data_orig, 'detection_status')
-    assert_array_equal(data_orig, data)
+    od = copy.deepcopy(data_orig)
+    data, name = meta_for_old_files.fix_old_data(od, 'detection_status')
+    assert_array_equal(od, data)
     assert ma.count(data) == 7
 
